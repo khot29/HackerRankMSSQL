@@ -1,7 +1,7 @@
 # HackerRankMSSQL
 
 # Easy
-## Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table
+- ## Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table
 ```
 select case
 when A + B <= C or A + C <= B OR B + C <= A then 'Not A Triangle'
@@ -13,7 +13,7 @@ FROM TRIANGLES;
 ```
 
 # Advance
-## Amber's conglomerate corporation just acquired some new companies. Each of the companies follows this hierarchy
+- ## Amber's conglomerate corporation just acquired some new companies. Each of the companies follows this hierarchy
 ```
 select c.company_code,c.founder,
 Count(distinct(e.lead_manager_code)),

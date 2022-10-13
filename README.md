@@ -1,5 +1,8 @@
 # HackerRankMSSQL
 
+#Easy
+
+# Advance
 ## Amber's conglomerate corporation just acquired some new companies. Each of the companies follows this hierarchy
 ```
 select c.company_code,c.founder,

@@ -12,6 +12,13 @@ END
 FROM TRIANGLES;
 ```
 
+# Medium
+- ## Consider P1(a,b) and P2(c,d) to be two points on a 2D plane.
+```
+select Cast(max(lat_n)-min(lat_n) + max(long_w)-min(long_w) as decimal(12,4)) from station
+```
+
+
 # Advance
 - ## Amber's conglomerate corporation just acquired some new companies. Each of the companies follows this hierarchy
 ```

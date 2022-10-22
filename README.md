@@ -1,6 +1,15 @@
 # HackerRankMSSQL
 
 # Easy
+- ## Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+     Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+```
+select sum(city.population) from city 
+inner join country 
+on city.countrycode = country.code
+where country.continent = 'Asia';
+```
+
 - ## Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table
 ```
 select case
@@ -22,6 +31,7 @@ select Cast(max(lat_n)-min(lat_n) + max(long_w)-min(long_w) as decimal(12,4)) fr
 select top 1 tableT.uniqueV from (select top 50 percent cast(lat_n as decimal(12,4))uniqueV  from station order by lat_n) as tableT
 order by tableT.uniqueV desc
 ```
+
 
 
 # Advance

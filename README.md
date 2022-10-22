@@ -17,6 +17,11 @@ FROM TRIANGLES;
 ```
 select Cast(max(lat_n)-min(lat_n) + max(long_w)-min(long_w) as decimal(12,4)) from station
 ```
+- ## A median is defined as a number separating the higher half of a data set from the lower half. Query the median of the Northern Latitudes (LAT_N) from STATION and round your answer to 4 decimal places.
+```
+select top 1 tableT.uniqueV from (select top 50 percent cast(lat_n as decimal(12,4))uniqueV  from station order by lat_n) as tableT
+order by tableT.uniqueV desc
+```
 
 
 # Advance

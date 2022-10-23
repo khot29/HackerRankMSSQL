@@ -31,6 +31,18 @@ select Cast(max(lat_n)-min(lat_n) + max(long_w)-min(long_w) as decimal(12,4)) fr
 select top 1 tableT.uniqueV from (select top 50 percent cast(lat_n as decimal(12,4))uniqueV  from station order by lat_n) as tableT
 order by tableT.uniqueV desc
 ```
+- ## You are given two tables: Students and Grades. Students contains three columns ID, Name and Marks.
+```
+select 
+case 
+when grades.grade < 8 then null
+else Students.Name
+end,
+grades.Grade,Students.Marks
+from Students, grades
+where Students.Marks >= grades.min_mark and Students.Marks <= grades.max_mark
+order by grades.Grade desc,Students.Name
+```
 
 
 

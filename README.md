@@ -44,6 +44,27 @@ where Students.Marks >= grades.min_mark and Students.Marks <= grades.max_mark
 order by grades.Grade desc,Students.Name
 ```
 
+- ## Pivot the Occupation column in OCCUPATIONS so that each Name is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be Doctor, Professor, Singer, and Actor, respectively.
+```
+SELECT [Doctor], [Professor], [Singer], [Actor] FROM   
+(
+    SELECT ROW_NUMBER() OVER 
+    (PARTITION BY Occupation ORDER BY Name) ROW_NO, 
+    ISNULL(NULL,Name) as Name, Occupation
+    FROM Occupations
+) as tableT
+PIVOT(
+    Min(Name)
+    FOR Occupation IN (
+        [Doctor], 
+        [Professor], 
+        [Singer], 
+        [Actor]
+    )
+) AS pivot_table
+ORDER BY ROW_NO;
+```
+
 
 
 # Advance

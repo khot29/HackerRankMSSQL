@@ -13,11 +13,12 @@
 ## Query all columns (attributes) for every row in the CITY table.
 - Select * from City
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+#### Select by ID
 ## Query all columns for a city in CITY with the ID 1661.
 - select * from city 
   where id = 1661
-  
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#### Japanese Cities Attributes
 ## Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
 - select * from city 
   where countrycode = "JPN"

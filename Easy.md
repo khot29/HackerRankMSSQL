@@ -57,6 +57,7 @@
   order by len(city),city;
 - select top 1 city, len(city) from station
   order by len(city) desc;
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Weather Observation Station 6
 ### Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.

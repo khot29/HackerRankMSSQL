@@ -23,7 +23,7 @@
 ## Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
 - select * from city 
   where countrycode = "JPN"
-
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### Japanese Cities' Names
 ## Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.
 - Select name from city 

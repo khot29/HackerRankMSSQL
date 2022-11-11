@@ -141,3 +141,11 @@
   where marks > 75
   order by right(name,3),id
 ```
+<HR>
+  
+#### Employee Names
+### Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+```
+  select name from employee
+  order by name
+```

@@ -161,4 +161,16 @@
 <HR>
   
 # Advanced Select
-
+#### Type of Triangle
+### Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table
+ ```
+select
+case
+when a + b <=  c or a + c <= b or b + c <= a Then "Not A Triangle"
+when a = b and b = c Then "Equilateral"
+when a = b or a = c or b = c  Then "Isosceles"
+else "Scalene"
+end
+from triangles
+ ```
+<HR>
